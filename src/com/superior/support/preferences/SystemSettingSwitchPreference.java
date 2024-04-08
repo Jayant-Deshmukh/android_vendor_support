@@ -20,8 +20,9 @@ package com.superior.support.preferences;
 import android.content.Context;
 import android.util.AttributeSet;
 
-public class SystemSettingSwitchPreference extends SwitchPreference {
+import androidx.preference.SwitchPreferenceCompat;
 
+public class SystemSettingSwitchPreference extends SwitchPreferenceCompat {
     public SystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
